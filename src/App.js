@@ -1,10 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from "./pages/home"
+import Header from "./components/header"
 
 function App() {
 	return (
-		<div>
-			<h1 className='text-danger'>hello World</h1>
-		</div>
+		<BrowserRouter>
+			<Header />
+			<Routes>
+				<Route path="/" component={<Home />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
